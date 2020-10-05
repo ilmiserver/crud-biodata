@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/biodata', 'BiodataController@index');
+Route::post('/biodata/create','BiodataController@create');

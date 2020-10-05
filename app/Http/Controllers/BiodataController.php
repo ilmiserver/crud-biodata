@@ -11,4 +11,11 @@ class BiodataController extends Controller
         $data_biodata = \App\Biodata::all();
         return view ('biodata.index',['data_biodata' => $data_biodata]);
     }
+
+    public function create(Request $request)
+    {
+        \App\Biodata::create($request->all());
+        return redirect('/biodata')->with('sukses','Data Berhasil diinput');
+    }
+    
 }

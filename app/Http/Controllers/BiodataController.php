@@ -18,4 +18,16 @@ class BiodataController extends Controller
         return redirect('/biodata')->with('sukses','Data Berhasil diinput');
     }
     
+    public function edit($id)
+    {
+        $biodata = \App\Biodata::find($id);
+        return view ('biodata/edit',['biodata' =>$biodata]);
+    }
+
+    public function update(Request $request,$id)
+    {
+        $biodata = \App\Biodata::find($id);
+        $biodata->update($request->all());
+        return redirect('/biodata')->with('sukses','Data Berhasil diupdate');
+    }
 }

@@ -29,6 +29,7 @@
           <th>Jenis Kelamin</th>
           <th>Agama</th>
           <th>Alamat</th>
+          <th>Aksi</th>
         </tr>
         @foreach($data_biodata as $biodata )
         <tr>
@@ -36,6 +37,7 @@
           <td>{{$biodata->jenis_kelamin}}</td>
           <td>{{$biodata->agama}}</td>
           <td>{{$biodata->alamat}}</td>
+        <td><a href="/biodata/{{$biodata->id}}/edit" class="btn btn-warning btn-sm">Edit</a></td>
         </tr>
         @endforeach
       </table>

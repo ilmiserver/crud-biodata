@@ -30,4 +30,11 @@ class BiodataController extends Controller
         $biodata->update($request->all());
         return redirect('/biodata')->with('sukses','Data Berhasil diupdate');
     }
+
+    public function delete($id)
+    {
+        $biodata = \App\Biodata::find($id);
+        $biodata->delete($biodata);
+        return redirect('biodata')->with('sukses','Data Berhasil Dihapus');
+    }
 }

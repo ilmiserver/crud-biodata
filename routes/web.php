@@ -21,3 +21,4 @@ Route::get('/biodata', 'BiodataController@index');
 Route::post('/biodata/create','BiodataController@create');
 Route::get('/biodata/{id}/edit','BiodataController@edit');
 Route::post('/biodata/{id}/update','BiodataController@update');
+Route::get('/biodata/{id}/delete','BiodataController@delete');
